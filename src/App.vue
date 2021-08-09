@@ -94,7 +94,7 @@ export default {
     },
     methods : {
 
-        /* ---------------------- get the list of all pokemons ---------------------- */
+        /* ---------------------- get the list of pokemons ---------------------- */
         getPokemons(url = this.url+'?limit='+this.limit+'&offset='+this.offset){ 
        
             axios.get(url)
@@ -144,7 +144,7 @@ export default {
             }
         },
 
-        /* ------------------------- the load more function ------------------------- */
+        /* ------------------------- the get load more function ------------------------- */
         get_load_more(){
 
             if(this.limit == 30){
@@ -160,7 +160,7 @@ export default {
             this.getPokemons();
         },
         
-        /* ----------------- the pagination by page number function ----------------- */
+        /* ----------------- the get pagination by page number function ----------------- */
         get_pagination_number(page_number){
             
             this.offset = (this.limit * page_number) - 30;
